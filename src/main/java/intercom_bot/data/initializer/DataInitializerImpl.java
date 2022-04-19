@@ -38,7 +38,7 @@ public class DataInitializerImpl implements DataInitializer {
                 String[] data = (scanner.nextLine() + " ").replaceAll("ё", "е").split(";");
                 if (!intercomService.isAddressAlreadyAdded(data[0], Integer.parseInt(data[1]))) {
                     intercomService.insert(new Intercom(data[0], Integer.parseInt(data[1]),
-                            data[2], data[3].substring(0, Math.min(250, data[3].length()))));
+                            data[2], data[3]));
                 }
             }
             log.info("[DATA INIT]: OK --> codes" + i);

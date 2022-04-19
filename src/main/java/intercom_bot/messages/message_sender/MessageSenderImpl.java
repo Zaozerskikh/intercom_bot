@@ -46,7 +46,7 @@ public class MessageSenderImpl implements MessageSender {
                     .append("Адрес: ").append(intercom.getHouseAddress())
                     .append("\nПодъезд: ").append(intercom.getEntranceNumber())
                     .append("\nКоды:\n").append(intercom.getFirstCode())
-                    .append("\n").append(intercom.getSecondCode()).append("\n"));
+                    .append("\n").append(intercom.getSecondCode()).append("\n\n"));
             send(bot, chatID, msgBuilder.toString());
         }
     }

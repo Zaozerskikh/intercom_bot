@@ -10,8 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @ToString
-@Entity(name = "intercom")
-@SuppressWarnings("all")
+@Entity(name = "intercoms")
 public class Intercom {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

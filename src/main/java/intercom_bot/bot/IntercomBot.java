@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
-
 import javax.annotation.PostConstruct;
 
 /**
@@ -25,6 +24,7 @@ public class IntercomBot extends TelegramLongPollingBot {
 
     private MessageHandler messageHandler;
 
+    @SuppressWarnings("all")
     private DataInitializer dataInitializer;
 
     @Autowired
@@ -49,7 +49,8 @@ public class IntercomBot extends TelegramLongPollingBot {
 
     @PostConstruct
     private void initData() {
-        dataInitializer.initIntercomData();
+        // only for first the launch.
+        // dataInitializer.initIntercomData();
     }
 
     /**
